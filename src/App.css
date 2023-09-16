@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&family=Space+Grotesk:wght@500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Outfit', sans-serif;
+
+}
+.App{
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #ddd;
+}
+.App .grid-container{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.bg-left{
+  background-image: url(./images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.bg-left .cart-front .cart-front-img img:nth-child(1){
+  width: 360px;
+}
+.bg-left .cart-front .cart-front-img img:nth-child(2){
+  width: 18%;
+  position: absolute;
+  top: 9%;
+  left: 6%;
+}
+.bg-left .cart-front {
+  position: absolute;
+  width: 360px;
+  top: 15%;
+  left: 28%;
+}
+.bg-left .cart-front.cart-info-front {
+  position: relative;
+}
+.bg-left .cart-front .number-card {
+  position: absolute;
+  color: #fff;
+  top: 42%;
+  left: 6%;
+}
+.bg-left .cart-front .number-card h3{
+  font-size: 1.7rem;
+}
+.bg-left .cart-front .info-card {
+  position: absolute;
+  color: #fff;
+  font-size: 0.8rem;
+  top: 78%;
+  left: 6%;
+}
+.bg-left .cart-front .info-card h6{
+  text-transform: uppercase;
+}
+.bg-left .cart-front .info-card.d-flex p {
+  right: 0;
+}
+
+.cart-back {
+  position: absolute;
+  width: 360px;
+  top: 48%;
+  left: 46%;
+}
+.cart-back .cvn-card{
+  position: absolute;
+  top: 43%;
+  right: 10%;
+  color: #fff;
+}
+
+.form-right{
+  background: #fff;
+
+}
+.form{
+  max-width: 300px;
+  margin: 20% auto;
+}
+
+.form form label{
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  color: hsl(278, 68%, 11%);
+  font-weight: 800;
+  margin: 10px 0;
+  letter-spacing: 1px;
+}
+.form form input{
+  width: 100%;
+  height: 44px;
+  border-radius: 8px;
+  padding: 0 10px;
+  margin: 8px 0;
+  border: 2px solid hsl(270, 3%, 87%);
+  outline: none;
+}
+
+.form form input:focus{
+  border: 2px solid hsl(279, 6%, 55%);
+}
+.form form input::placeholder{
+  color: hsl(274, 6%, 77%);
+  font-weight: 500;
+}
+.form form .grid-group-input{
+  display: grid;
+  grid-template-columns: 1.8fr 2fr;
+}
+.form form .grid-group-input .grid-date-input{
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  column-gap: 10px;
+}
+.form form .grid-group-input .grid-date-input label{
+  grid-column: span 3;
+}
+.form form .grid-group-input .grid-date-input .errors{
+  grid-column: span 3;
+}
+.form form .grid-group-input .cvc input{
+  margin-top: 20px;
+}
+.form form button{
+  background-color: hsl(278, 68%, 11%);
+  color: #fff;
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  margin-top: 55px;
+}
+.form form .errors{
+  color: rgb(255, 31, 31);
+  font-size: 13px;
+}
+.form form .errors-input{
+  border: 1px solid rgb(255, 31, 31);
+}
+.thanks{
+  max-width: 350px;
+  margin: 20% auto;
+  text-align: center;
+  padding-top: 30px;
+}
+.thanks .icon{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  margin: 20px 0;
+}
+.thanks h1{
+  text-transform: uppercase;
+  color: hsl(278, 68%, 11%);
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin: 8px 0;
+}
+.thanks p{
+  font-size: 18px;
+  color: hsl(279, 6%, 55%);
+}
+.thanks button{
+  width: 100%;
+  background-color:hsl(278, 68%, 11%) ;
+  color: hsl(0, 0%, 100%);
+  border-radius: 8px;
+  padding: 10px 0;
+  margin: 30px 0;
+}
+/* Looder  */
+.looder{
+  max-width: 300px;
+  margin: 0 auto;
+  min-height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom-loader {
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  background:conic-gradient(#0000 10%,hsl(278, 68%, 11%));
+  -webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+  animation:s3 1s infinite linear;
+}
+@keyframes s3 {to{transform: rotate(1turn)}}
+/* resposive laptop */
+@media screen and (max-width:1045px) {
+
+}
+/* responsive Tablet */
+@media screen and (max-width:920px) {
+  
+}
+/* rsponsive mobile */
+@media screen and (max-width:790px) {
+  .App .grid-container{
+    grid-template-columns: 1fr;
+  }
+  .bg-left{
+    background-image: url(./images/bg-main-mobile.png);
+    height: 40vh;
+  }
+  .bg-left .cart-front{
+    left: 5%;
+    top: 50%;
+    z-index: 2;
+  }
+  .bg-left .cart-back{
+    top: 10%;
+    left: 25%;
+    z-index: 1;
+  }
+}
+@media screen and (max-width:480px) {
+  .bg-left{
+    height: 30vh;
+  }
+  .bg-left .cart-front{
+    width: 300px;
+    top: 47.5%;
+  }
+  .bg-left .cart-front .number-card h3{
+    font-size: 1.4rem;
+  }
+  .bg-left .cart-back{
+    width: 300px;
+    left: 16%;
+  }
+}
